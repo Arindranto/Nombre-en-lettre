@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>Nunber to letter</title>
+        <meta charset= "utf-8" />
+        <meta name="viewport" content="initial-scale=1.0 width=device-width" />
+        <script type="text/javascript" src= "converter.js">
+        </script>
+    </head>
+    <body>
+        <center>
+            <h3>
+                Entrez le nombre entier naturel à convertir
+            </h3>
+            <input type="text" id="zInput" />
+            <div id= "output" style="font-size: 1em;">
+                <!-- Le résultat sera afficher ici -->
+            </div>
+        </center>
+
+        <!--Script-->
+        <script type="text/javascript">
+            // Nombre en lettres
+            var inp=document.getElementById("zInput");  // L'input
+            var div=document.getElementById("output");   // Le span
+
+            inp.addEventListener("input",function (e){
+                if (inp.value=="")
+                    div.innerText="";
+                else
+                    div.innerText= toLetter(parseInt(inp.value));
+            });
+        </script>
+    </body>
+</html>
